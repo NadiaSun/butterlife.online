@@ -1,0 +1,3 @@
+Sitemap: https://internship.website/
+User-agent: *
+Allow: https://internship.website/
