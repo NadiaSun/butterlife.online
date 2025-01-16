@@ -9,13 +9,12 @@
 	
 	<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
-	<!-- This site is optimized with the Yoast SEO plugin v20.9 - https://yoast.com/wordpress/plugins/seo/ -->
 	<title>Веб-студія ButterLife - Офіційний сайт</title>
-	<meta name="description" content="Создание, обслуживание и продвижение сайтов. Контекстная реклама и SMM. Более 12 лет опыта. Звоните: +38 (068) 256-35-12">
-	<meta property="og:locale" content="ru_RU">
+	<meta name="description" content="Создание, обслуживание и продвижение сайтов. Контекстная реклама и SMM. Более 10 лет опыта. Звоните: +38 (097) 57-60-466">
+	<meta property="og:locale" content="uk">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="Веб-студия ButterLife - Официальный сайт">
-	<meta property="og:description" content="Создание, обслуживание и продвижение сайтов. Контекстная реклама и SMM. Более 12 лет опыта. Звоните: ">
+	<meta property="og:description" content="Создание, обслуживание и продвижение сайтов. Контекстная реклама и SMM. Более 10 лет опыта. Звоните: ">
 	<meta property="og:url" content="#">
 	<meta property="og:site_name" content="Веб-студия ButterLife">
 	<meta property="article:modified_time" content="">
@@ -49,8 +48,260 @@
 
 <body class="home page-template-default page page-id-66">
 
+<div class="cd-request-popup js-cd-popup" id="popup-message" style="top: 20%;font-family: 'Open Sans', sans-serif;">
+	<button class="cd-request-popup__close js-close-cd-popup cd-btn secondary close-btn" id="btn-close">
+		<img src="./images/cross_w.png" alt="" class="img-close">
+	</button>
+	<div class="cd-request-popup__content js-popup-content js-request">
+		<p class="cd-request-popup__title">
+			<font style="vertical-align: inherit;"> <font style="vertical-align: inherit;">Зв'язатися з нами:</font></font>
+		</p>
+		<div class="mp-form-wrapper">
+			<p class="mp-request-popup__text"></p>
+			<form novalidate="" method="post" action="/" data-object="/solution" class="cd-form js-cd-form form ng-untouched ng-pristine ng-valid">
+				<div class="mp-form__btn">
+					<a href="viber://chat?number=%2B380975760466&draft=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F!%20%D0%97%D0%B2%D0%B5%D1%80%D1%82%D0%B0%D1%8E%D1%81%D1%8F%20%D1%96%D0%B7%20%D1%81%D0%B0%D0%B9%D1%82%D1%83:%20https://butterlife-online.vercel.app/" target="_blank" class="btn-href">
+						<button type="button" class="cd-btn js-request form_submit_btn" style="width: 100%; background-color: #7360f2;">
+							<font style="vertical-align: inherit;"><font style="display: flex;"><div class="viber-btn mp-button"></div> Viber</font></font>
+						</button>
+					</a>
+					<a href="https://t.me/WebsiteRental_bot?start=67858bc16adb5735ba055c4c" target="_blank" class="btn-href">
+						<button type="button" class="cd-btn js-request form_submit_btn" style="width: 100%; background-color: #0088cc;">
+							<font style="vertical-align: inherit;"><font style="display: flex;"><div class="tg-btn mp-button"></div> Telegram</font></font>
+						</button>
+					</a>
+					<a href="https://wa.me/380975760466?text=%D0%94%D0%BE%D0%B1%D1%80%D0%BE%D0%B3%D0%BE%20%D0%B4%D0%BD%D1%8F!%20%D0%97%D0%B2%D0%B5%D1%80%D1%82%D0%B0%D1%8E%D1%81%D1%8F%20%D1%96%D0%B7%20%D1%81%D0%B0%D0%B9%D1%82%D1%83:%20https://butterlife-online.vercel.app/" target="_blank" class="btn-href">
+						<button type="button" class="cd-btn js-request form_submit_btn" style="width: 100%; background-color: #25d366;">
+							<font style="vertical-align: inherit;"><font style="display: flex;"><div class="whatsapp-btn mp-button"></div> WhatsApp</font></font>
+						</button>
+					</a>
+					<a href="tel:+380975760466" class="tell-btn">+38 (097) 57-60-466</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
 
-	
+<div class="overlay" id="block-close"></div>
+
+
+<style> 
+.overlay {
+    display: none;
+    background-color: #212121;
+    opacity: .70;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1062;
+}
+
+.cd-request-popup {
+    position: fixed;
+    width: 80%;
+    max-width: 400px;
+    z-index: 1063;
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 50%);
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 32px 16px;
+    left: 50%;
+    transform: translateX(-50%);
+	display: none;
+}
+
+.close-btn {
+    background: #c58ccf !important;
+}
+.cd-btn.secondary {
+    box-shadow: none;
+    background-color: #f8f8f8;
+    color: #0369d9;
+}
+
+
+
+.cd-btn {
+    display: inline-flex;
+    vertical-align: top;
+    justify-content: center;
+    align-items: center;
+    outline: 0;
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -.19px;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 24px;
+    background-color: #1ca345;
+    transition: 0.2s ease;
+    cursor: pointer;
+    appearance: none;
+}
+.cd-request-popup__close {
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 5px 3px -3px rgba(176, 176, 176, 27%), inset 0 0 0 2px #dfdfdf;
+    border-radius: 50%;
+    background-color: #fafaf9;
+    appearance: none;
+    border: none;
+    padding: 0;
+    outline: 0;
+    position: absolute;
+    top: -18px;
+    right: -14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.cd-request-popup button {
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.img-close {
+    right: unset;
+    top: unset;
+	position: absolute;
+    width: 5vh;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.cd-request-popup__title {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -.4px;
+    text-align: center;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.mp-request-popup__text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -.4px;
+    margin: 0 0 24px;
+}
+
+.cd-form {
+    text-align: center;
+}
+
+
+.mp-form__btn {
+    margin-top: 2px;
+    position: relative;
+}
+
+.btn-href {
+    height: 100%;
+    display: block;
+}
+
+.cd-request-popup__close > a {
+    text-decoration: none;
+}
+
+.form_submit_btn {
+    margin: 10px !important;
+}
+
+.mp-button {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.viber-btn {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 1C7.28 1 1 7.28 1 15c0 2.716.778 5.335 2.257 7.608l-2.181 5.09A.933.933 0 0 0 2.3 28.925l5.09-2.182A13.887 13.887 0 0 0 15 29c7.72 0 14-6.28 14-14S22.72 1 15 1Zm7.187 19.012s-1.165 1.492-2.007 1.841c-2.137.885-5.157 0-8.596-3.438-3.437-3.438-4.323-6.458-3.437-8.596.349-.842 1.842-2.005 1.842-2.005a1.087 1.087 0 0 1 1.396.087l1.69 1.69a.936.936 0 0 1 0 1.318l-1.062 1.06s-.429 1.288 2.15 3.867c2.578 2.58 3.867 2.15 3.867 2.15l1.06-1.06a.936.936 0 0 1 1.32 0l1.689 1.689c.362.363.401.991.086 1.396l.002.001Z' fill='%23fff'/%3E%3C/svg%3E")
+}
+
+.tg-btn {
+    background-image: url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1.617 14.335 6.44 2.15 15.291-9.192c.222-.133.45.163.258.336L12.03 18.107l-.43 5.866a.48.48 0 0 0 .285.475.501.501 0 0 0 .553-.093l3.564-3.447 6.516 4.85c.702.523 1.72.155 1.908-.691l4.537-20.258c.26-1.156-.893-2.131-2.016-1.708L1.585 12.65a.89.89 0 0 0 .032 1.684Z' fill='%23fff'/%3E%3C/svg%3E")
+}
+
+.whatsapp-btn {
+    background-image: url("./images/whatsapp-white-icon\(2\).png");
+    width: 30px;
+    height: 30px
+}
+
+.close-btn:hover {
+    background: #d7a6e0 !important;
+}
+
+.tell-btn {
+    color: #08c;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 10px;
+}
+
+@media (min-width: 1200px) {
+    .cd-btn:active {
+        background: linear-gradient(0deg, rgba(0, 0, 0, 10%), rgba(0, 0, 0, 10%)), #1ca345;
+    }
+}
+@media (min-width: 1200px) {
+    .cd-btn:hover {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 14%), rgba(255, 255, 255, 14%)), #1ca345;
+        box-shadow: 0 8px 12px rgba(188, 239, 189, 40%);
+    }
+}
+
+.cd-btn:focus {
+	outline: none;
+}
+@media (min-width: 600px) {
+    .cd-request-popup {
+        padding: 32px !important;
+    }
+}
+@media (min-width: 600px) {
+    .cd-request-popup .mp-form__btn {
+        text-align: center;
+    }
+}
+@media (min-width: 600px) {
+    .mp-request-popup__text {
+        margin-bottom: 32px;
+    }
+}
+
+@media (min-width: 600px) {
+    .cd-request-popup__title {
+        font-size: 28px;
+    }
+}
+@media (min-width: 960px) {
+    .cd-request-popup__content .cd-btn {
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: -.4px;
+        padding: 12px 28px;
+    }
+}
+@media (min-width: 960px) {
+    .cd-btn.secondary {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+</style>
 <header>
 
 
@@ -58,27 +309,27 @@
 	<div class="row">
 		<div class="col-6 col-md-2 logo">
 			<a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" class="menu d-md-none"><i class="fas fa-bars"></i></a>
-			<a href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ButterLife</font></font></a>
+			<a href="https://butterlife.online"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ButterLife</font></font></a>
 		</div>
 		<div class="col-6 order-md-last col-md-6 actions">
 			<ul>
 				<li>
-					<a href="https://t.me/JPTSchool_bot" class="btn btn-icon btn-line login"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Увійти</font></font></a>				</li>
+					<a href="#" class="btn btn-icon btn-line login"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Увійти</font></font></a>				</li>
 				<li class="d-none d-md-inline-block">
-					<a href="https://t.me/JPTSchool_bot" class="btn btn-icon btn-yellow order"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Замовити</font></font></a>				</li>
+					<a class="btn-messenger btn btn-icon btn-yellow order"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Замовити</font></font></a>				</li>
 				<li class="d-none d-md-inline-block">
-					<a class="phone-text" href="tel:+380682563512">
-						<span class="hidden-xs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+38 (068) 256-35-12</font></font></span>
+					<a class="phone-text" href="tel:+380975760466">
+						<span class="hidden-xs"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+38 (097) 57-60-466</font></font></span>
 					</a>
 				</li>
 			</ul>
 		</div>
 		<div class="col-md-4 order-md-2 d-md-block menu collapse" id="collapseExample">
 			<ul>
-				<li><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Послуги</font></font></a></li>
-				<li><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портфоліо</font></font></a></li>
-				<li><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Відгуки</font></font></a></li>
-				<li><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Контакти</font></font></a></li>
+				<li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Послуги</font></font></a></li>
+				<li><a href="https://www.rieltor.website/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портфоліо</font></font></a></li>
+				<li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ціни</font></font></a></li>
+				<li><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Контакти</font></font></a></li>
 			</ul>
 		</div>
 		</div>
@@ -87,8 +338,8 @@
 		<div class="col-md-7">
 			<h1><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Веб-студія, яка працює онлайн</font></font></h1>
 			<h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Заощаджуйте час на зустрічі та поїздки в офіс, ми працюємо онлайн</font></font></h5>
-			<a href="https://t.me/JPTSchool_bot" class="btn btn-yellow btn-upp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портфоліо</font></font></a>
-			<a href="https://t.me/JPTSchool_bot" class="btn btn-line btn-upp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Обговорити проект</font></font></a>
+			<a href="https://www.rieltor.website/" class="btn btn-yellow btn-upp"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портфоліо</font></font></a>
+			<a class="btn btn-line btn-upp btn-messenger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Обговорити проект</font></font></a>
 		</div>
 		<div class="col-md-5 img">
 		</div>
@@ -104,13 +355,13 @@
 	<div class="row">
 		<div class="col-xs-12">
 			<ul>
-				<li id="menu-item-403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403"><a title="Створення сайтів «під ключ»" href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Створення </font></font><span class="hidden-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">сайтів</font></font></span></a></li>
-<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Обслуговування </font></font><span class="hidden-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">сайтів</font></font></span></a></li>
-<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEO </font></font><span class="hidden-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- просування</font></font></span></a></li>
-<li id="menu-item-404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">контекстна реклама</font></font></a></li>
-<li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Консультування</font></font></a></li>
-<li id="menu-item-639" class="visible-xs menu-item menu-item-type-custom menu-item-object-custom menu-item-639"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портфоліо</font></font></a></li>
-<li id="menu-item-640" class="visible-xs menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Контакти</font></font></a></li>
+				<li id="menu-item-403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-403"><a title="Створення сайтів «під ключ»" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Створення </font></font><span class="hidden-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">сайтів</font></font></span></a></li>
+<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Обслуговування </font></font><span class="hidden-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">сайтів</font></font></span></a></li>
+<li id="menu-item-405" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-405"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEO </font></font><span class="hidden-sm"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- просування</font></font></span></a></li>
+<li id="menu-item-404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-404"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">контекстна реклама</font></font></a></li>
+<li id="menu-item-550" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-550"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Консультування</font></font></a></li>
+<li id="menu-item-639" class="visible-xs menu-item menu-item-type-custom menu-item-object-custom menu-item-639"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портфоліо</font></font></a></li>
+<li id="menu-item-640" class="visible-xs menu-item menu-item-type-post_type menu-item-object-page menu-item-640"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Контакти</font></font></a></li>
 			</ul>
 		</div>
 	</div>
@@ -127,21 +378,21 @@
 	</div>
 	<div class="row services-items">
 		<div class="col-md-3">
-			<a href="https://t.me/JPTSchool_bot" title="Створення корпоративного сайту" class="service-1">
+			<a href="#" title="Створення корпоративного сайту" class="service-1">
 				<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Корпоративний сайт</font></font></h3>
 				<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Цілодобовий віртуальний офіс компанії. Якщо вашого бізнесу немає в інтернеті – зробіть такий сайт.</font></font></p>
 				<div class="price"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">від 10 000 грн</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">зробимо за 15 днів</font></font></div>
 			</a>
 		</div>
 		<div class="col-md-3">
-			<a href="https://t.me/JPTSchool_bot" title="Створення Landing Page" class="service-2">
+			<a href="#" title="Створення Landing Page" class="service-2">
 				<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Цільова сторінка</font></font></h3>
 				<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Лендінг пейдж (посадкова сторінка), односторонній сайт для продажу товару або послуги з високою конверсією.</font></font></p>
 				<div class="price"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">від 2 000 грн</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">зробимо за 5 днів</font></font></div>
 			</a>
 		</div>
 		<div class="col-md-3">
-			<a href="https://t.me/JPTSchool_bot" title="Створення Інтернет-магазину" class="service-3">
+			<a href="#" title="Створення Інтернет-магазину" class="service-3">
 				<h3><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Інтернет магазин</font></font></h3>
 				<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Інструмент електронної комерції "під ключ". Пошук товарів, кошик, оформлення замовлення, оплата замовлення онлайн.</font></font></p>
 				<div class="price"><span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">від 20 000 грн</font></font></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">зробимо за 30 днів</font></font></div>
@@ -160,8 +411,9 @@
 
 <section class="work-online">
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#2a325f" fill-opacity="1" d="M0,0L60,5.3C120,11,240,21,360,42.7C480,64,600,96,720,90.7C840,85,960,43,1080,26.7C1200,11,1320,21,1380,26.7L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-	<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Ми працюємо онлайн</font></font></h2>
-	<h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">У нас зручний та зрозумілий особистий кабінет</font></font></h5>
+	
+	<h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></h2>
+	<h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"></font></font></h5>
 	<div class="laptop">
 		<img src="images/cabinet-screen.jpg">
 		<img src="images/work-online-laptop.png">
@@ -221,34 +473,37 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-3 hidden-sm hidden-xs about">
-			<a href="/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ButterLife</font></font></a>
+			<a href="https://butterlife.online"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ButterLife</font></font></a>
 			<p></p>
 			<p></p>
 			<p></p>
-			<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2006-2024</font></font></p>
+			<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">© 2005-2025</font></font></p>
 			
 					</div>
 		<div class="col-md-3 col-sm-4">
-			<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Створення сайтів</font></font></b>
-			<ul id="menu-futer-sozdanie-sajtov" class="menu"><li id="menu-item-961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-961"><a title="Створення корпоративного сайту" href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Корпоративний сайт</font></font></a></li>
-<li id="menu-item-960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-960"><a title="Створення Інтернет-магазину" href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Інтернет магазин</font></font></a></li>
-<li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a title="Створення Landing Page" href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Цільова сторінка</font></font></a></li>
-</ul>			<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Просування сайтів</font></font></b>
-			<ul id="menu-futer-prodvizhenie-sajtov" class="menu"><li id="menu-item-685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-685"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEO-просування</font></font></a></li>
-<li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-686"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">контекстна реклама</font></font></a></li>
-<li id="menu-item-683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-683"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SMM-просування</font></font></a></li>
-</ul>		</div>
+			<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit; cursor: pointer" class="btn-messenger">Замовити</font></font></b>
+			<!-- <ul id="menu-futer-sozdanie-sajtov" class="menu"><li id="menu-item-961" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-961"><a title="Створення корпоративного сайту" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Корпоративний сайт</font></font></a></li> -->
+<!-- <li id="menu-item-960" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-960"><a title="Створення Інтернет-магазину" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Інтернет магазин</font></font></a></li> -->
+<!-- <li id="menu-item-959" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-959"><a title="Створення Landing Page" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Цільова сторінка</font></font></a></li> -->
+<!-- </ul>			<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Просування сайтів</font></font></b> -->
+			<!-- <ul id="menu-futer-prodvizhenie-sajtov" class="menu"><li id="menu-item-685" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-685"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SEO-просування</font></font></a></li> -->
+<!-- <li id="menu-item-686" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-686"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">контекстна реклама</font></font></a></li> -->
+<!-- <li id="menu-item-683" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-683"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SMM-просування</font></font></a></li> -->
+<!-- </ul> -->		</div>
+
+
 		<div class="col-md-3 col-sm-4">
-			<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Наша студія</font></font></b>
-			<ul id="menu-futer-nasha-studiya" class="menu"><li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Знижки та акції</font></font></a></li>
-<li id="menu-item-444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-444"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Наше портфоліо</font></font></a></li>
-<li id="menu-item-762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-762"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Блог</font></font></a></li>
-<li id="menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-696"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Вакансії</font></font></a></li>
-<li id="menu-item-786" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-786"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Політика конфіденційності</font></font></a></li>
-<li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898"><a href="https://t.me/JPTSchool_bot"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Користувача угода</font></font></a></li>
-</ul>		</div>
+			<b><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Портфоліо</font></font></b>
+			<!-- <ul id="menu-futer-nasha-studiya" class="menu"><li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-445"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Знижки та акції</font></font></a></li> -->
+<!-- <li id="menu-item-444" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-444"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Наше портфоліо</font></font></a></li> -->
+<!-- <li id="menu-item-762" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-762"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Блог</font></font></a></li> -->
+<!-- <li id="menu-item-696" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-696"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Вакансії</font></font></a></li> -->
+<!-- <li id="menu-item-786" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-786"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Політика конфіденційності</font></font></a></li> -->
+<!-- <li id="menu-item-898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-898"><a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Користувача угода</font></font></a></li> -->
+<!-- </ul> -->		
+</div>
 		<div class="col-md-3 col-sm-4">
-			<a href="tel:+380682563512" class="phone"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+38 (068) 256-35-12</font></font></a>
+			<a href="tel:+380975760466" class="phone"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">+38 (097) 57-60-466</font></font></a>
 			<p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Щодня з 10:00 до 18:00</font></font></p>
 
 
@@ -267,5 +522,24 @@
 
 <script type="text/javascript" src="js/jquery.easing.min.js" id="jquery-easing-js"></script>
 <script type="text/javascript" src="js/jquery.mousewheel.min.js" id="jquery-mousewheel-js"></script>
-
+<script>
+	const popup = document.getElementById('popup-message')
+	const btns = document.querySelectorAll('.btn-messenger')
+	const close = document.getElementById('btn-close')
+	const closeBlock = document.getElementById('block-close')
+	for(let btn of btns) {
+		btn.addEventListener('click', ()=> {
+			popup.style.display='block'
+			closeBlock.style.display = 'block'
+		})
+	}
+	close.addEventListener('click', ()=> {
+		popup.style.display='none'
+		closeBlock.style.display = 'none'
+	})
+	closeBlock.addEventListener('click', ()=> {
+		popup.style.display='none'
+		closeBlock.style.display = 'none'
+	})
+</script>
 </body></html>
